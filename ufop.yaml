@@ -1,0 +1,11 @@
+image: ubuntu
+
+build_script:
+        - sudo apt-get update -y
+        - sudo apt-get install nodejs -y
+        - node -v
+        - mv $RESOURCE/src/* .
+        - ls
+        - npm install pm2
+
+run: node server.js
